@@ -1,0 +1,23 @@
+---
+
+- name: Configure host.
+  hosts: all
+
+  pre_tasks:
+  - name: Update APT Repositories
+    become: true
+    apt:
+      force_apt_get: true
+      update_cache: true
+      state: present
+
+  tasks:
+    - import_tasks: tasks/git.yml
+    - import_tasks: tasks/nano.yml
+    - import_tasks: tasks/tmux.yml
+    - import_tasks: tasks/tree.yml
+    - import_tasks: tasks/meld.yml
+    - import_tasks: tasks/curl.yml
+    - import_tasks: tasks/firefox.yml
+    - import_tasks: tasks/vlc.yml
+    - import_tasks: tasks/libreoffice.yml

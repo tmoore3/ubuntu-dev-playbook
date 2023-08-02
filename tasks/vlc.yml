@@ -1,0 +1,6 @@
+- name: "vlc: install vlc package"
+  tags: vlc
+  apt:
+    name: vlc
+    state: latest
+  become: true

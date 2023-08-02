@@ -1,0 +1,6 @@
+- name: "curl: Install curl package"
+  tags: curl
+  apt:
+    name: curl
+    state: latest
+  become: true

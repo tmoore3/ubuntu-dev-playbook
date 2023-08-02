@@ -1,0 +1,6 @@
+- name: "nano: Install nano package"
+  tags: nano
+  apt:
+    name: nano
+    state: latest
+  become: true

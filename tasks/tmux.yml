@@ -1,0 +1,6 @@
+- name: "tmux: Install tmux package"
+  tags: tmux
+  apt:
+    name: tmux
+    state: latest
+  become: true
