@@ -21,3 +21,4 @@
     - import_tasks: tasks/firefox.yml
     - import_tasks: tasks/vlc.yml
     - import_tasks: tasks/libreoffice.yml
+    - import_tasks: tasks/sqlite3.yml

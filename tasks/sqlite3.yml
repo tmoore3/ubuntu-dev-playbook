@@ -1,0 +1,13 @@
+- name: "sqlite3: Install sqlite3 package"
+  tags: sqlite3
+  apt:
+    name: sqlite3
+    state: latest
+  become: true
+
+- name: "sqlite3: Install sqlitebrowser package"
+  tags: sqlite3 sqlitebrowser
+  apt:
+    name: sqlitebrowser
+    state: latest
+  become: true
