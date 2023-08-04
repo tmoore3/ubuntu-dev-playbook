@@ -1,0 +1,101 @@
+- name: "vscode: Install vcode package"
+  tags: vscode
+  apt:
+    name: code
+    state: latest
+  become: true
+
+# Extensions
+
+# Markdown
+- name: "vscode: Install vscode extension Markdown Previewer"
+  tags: vscode
+  register: result
+  shell: code --install-extension bierner.markdown-preview-github-styles
+  changed_when: '"successfully installed" in result.stdout'
+
+# XMl
+- name: "vscode: Install vscode extension XML"
+  tags: vscode
+  register: result
+  shell: code --install-extension redhat.vscode-xml
+  changed_when: '"successfully installed" in result.stdout'
+
+# YAML
+- name: "vscode: Install vscode extension YAML"
+  tags: vscode
+  register: result
+  shell: code --install-extension redhat.vscode-yaml
+  changed_when: '"successfully installed" in result.stdout'
+
+# Ansible
+- name: "vscode: Install vscode extension Ansible"
+  tags: vscode
+  register: result
+  shell: code --install-extension redhat.ansible
+  changed_when: '"successfully installed" in result.stdout'
+
+# Python
+- name: "vscode: Install vscode extension Python"
+  tags: vscode
+  register: result
+  shell: code --install-extension ms-python.python
+  changed_when: '"successfully installed" in result.stdout'
+
+- name: "vscode: Install vscode extension Pylance"
+  tags: vscode
+  register: result
+  shell: code --install-extension ms-python.vscode-pylance
+  changed_when: '"successfully installed" in result.stdout'
+
+- name: "vscode: Install vscode extension Pylint"
+  tags: vscode
+  register: result
+  shell: code --install-extension ms-python.pylint
+  changed_when: '"successfully installed" in result.stdout'
+
+# IntelliCode
+- name: "vscode: Install vscode extension IntelliCode"
+  tags: vscode
+  register: result
+  shell: code --install-extension VisualStudioExptTeam.vscodeintellicode
+  changed_when: '"successfully installed" in result.stdout'
+
+- name: "vscode: Install vscode extension IntelliCode API"
+  tags: vscode
+  register: result
+  shell: code --install-extension VisualStudioExptTeam.intellicode-api-usage-examples
+  changed_when: '"successfully installed" in result.stdout'
+
+# C
+- name: "vscode: Install vscode extension C/C++"
+  tags: vscode
+  register: result
+  shell: code --install-extension ms-vscode.cpptools
+  changed_when: '"successfully installed" in result.stdout'
+
+- name: "vscode: Install vscode extension C/C++ Extension Pack"
+  tags: vscode
+  register: result
+  shell: code --install-extension ms-vscode.cpptools-extension-pack
+  changed_when: '"successfully installed" in result.stdout'
+
+- name: "vscode: Install vscode extension C/C++ Themes"
+  tags: vscode
+  register: result
+  shell: code --install-extension ms-vscode.cpptools-themes
+  changed_when: '"successfully installed" in result.stdout'
+
+# Makefile
+- name: "vscode: Install vscode extension Makefile Tools"
+  tags: vscode
+  register: result
+  shell: code --install-extension ms-vscode.makefile-tools
+  changed_when: '"successfully installed" in result.stdout'
+
+# CMake
+- name: "vscode: Install vscode extension CMake Tools"
+  tags: vscode
+  register: result
+  shell: code --install-extension ms-vscode.cmake-tools
+  changed_when: '"successfully installed" in result.stdout'
