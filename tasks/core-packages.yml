@@ -1,0 +1,55 @@
+- name: "core: Install System Packages (build-essential, cmake, pkg-config)"
+  become: true
+  apt:
+    name: ["build-essential", "cmake", "pkg-config"]
+  tags:
+    - install
+    - core
+
+- name: "core: Install Text Editor Packages (nano, vim)"
+  become: true
+  apt:
+    name: ["nano", "vim"]
+  tags:
+    - install
+    - core
+
+- name: "core: Install Terminal Packages (tmux, tree)"
+  become: true
+  apt:
+    name: ["tmux", "tree"]
+  tags:
+    - install
+    - core
+
+- name: "core: Install Networking Packages (curl, nmap)"
+  become: true
+  apt:
+    name: ["curl", "nmap"]
+  tags:
+    - install
+    - core
+
+- name: "core: Install Browser Packages (firefox)"
+  become: true
+  apt:
+    name: "firefox"
+  tags:
+    - install
+    - core
+
+- name: "core: Install Version Control Packages (git, svn)"
+  become: true
+  apt:
+    name: ["git", "subversion"]
+  tags:
+    - install
+    - core
+
+- name: "core: Install Code Quality Packages (cppcheck, spellcheck, meld)"
+  become: true
+  apt:
+    name: ["cppcheck", "shellcheck", "meld"]
+  tags:
+    - install
+    - core

@@ -1,6 +1,0 @@
-- name: "firefox: install firefox package"
-  tags: firefox
-  apt:
-    name: firefox
-    state: latest
-  become: true

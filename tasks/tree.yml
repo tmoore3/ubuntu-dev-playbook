@@ -1,6 +1,0 @@
-- name: "tree: Install tree package"
-  tags: tree
-  apt:
-    name: tree
-    state: latest
-  become: true

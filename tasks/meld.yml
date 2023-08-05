@@ -1,6 +1,0 @@
-- name: "meld: Install meld package"
-  tags: meld
-  apt:
-    name: meld
-    state: latest
-  become: true

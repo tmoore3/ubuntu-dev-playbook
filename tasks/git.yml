@@ -1,6 +1,0 @@
-- name: "git: Install git package"
-  tags: git
-  apt:
-    name: git
-    state: latest
-  become: true

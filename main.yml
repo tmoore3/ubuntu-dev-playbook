@@ -12,13 +12,7 @@
       state: present
 
   tasks:
-    - import_tasks: tasks/git.yml
-    - import_tasks: tasks/nano.yml
-    - import_tasks: tasks/tmux.yml
-    - import_tasks: tasks/tree.yml
-    - import_tasks: tasks/meld.yml
-    - import_tasks: tasks/curl.yml
-    - import_tasks: tasks/firefox.yml
+    - import_tasks: tasks/core-packages.yml
     - import_tasks: tasks/vlc.yml
     - import_tasks: tasks/libreoffice.yml
     - import_tasks: tasks/sqlite3.yml
