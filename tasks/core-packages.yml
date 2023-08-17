@@ -1,11 +1,3 @@
-- name: "core: Install System Packages (build-essential, cmake, pkg-config)"
-  become: true
-  apt:
-    name: ["build-essential", "cmake", "pkg-config"]
-  tags:
-    - install
-    - core
-
 - name: "core: Install Text Editor Packages (nano, vim)"
   become: true
   apt:
@@ -46,7 +38,31 @@
     - install
     - core
 
-- name: "core: Install Code Quality Packages (cppcheck, spellcheck, meld)"
+- name: "core: Install Software Development Packages (build-essential, gcc, make, cmake, pkg-config, device-tree-compiler, u-boot-tools)"
+  become: true
+  apt:
+    name: ["build-essential", "gcc", "make", "cmake", "pkg-config", "device-tree-compiler", "u-boot-tools"]
+  tags:
+    - install
+    - core
+
+- name: "core: Install Software Debugging Packages (gdb, gdb-multiarch, strace)"
+  become: true
+  apt:
+    name: ["gdb", "gdb-multiarch", "strace"]
+  tags:
+    - install
+    - core
+
+- name: "core: Install Software Profiling Packages (oprofile, lttng-tools, valgrind)"
+  become: true
+  apt:
+    name: ["oprofile", "lttng-tools", "valgrind"]
+  tags:
+    - install
+    - core
+
+- name: "core: Install Software Code Quality Packages (cppcheck, spellcheck, meld)"
   become: true
   apt:
     name: ["cppcheck", "shellcheck", "meld"]
