@@ -62,10 +62,10 @@
     - install
     - core
 
-- name: "core: Install Software Code Quality Packages (cppcheck, spellcheck, meld, doxygen)"
+- name: "core: Install Software Code Quality Packages (cppcheck, spellcheck, meld, doxygen, python3-sphinx)"
   become: true
   apt:
-    name: ["cppcheck", "shellcheck", "meld", "doxygen"]
+    name: ["cppcheck", "shellcheck", "meld", "doxygen", "python3-sphinx"]
   tags:
     - install
     - core
