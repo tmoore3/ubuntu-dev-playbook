@@ -3,6 +3,9 @@
 - name: Configure host.
   hosts: all
 
+  vars_files:
+    - default.config.yml
+
   pre_tasks:
   - name: Update APT Repositories
     become: true
@@ -16,4 +19,5 @@
     - import_tasks: tasks/vlc.yml
     - import_tasks: tasks/libreoffice.yml
     - import_tasks: tasks/sqlite3.yml
+      when: install_sqlite3
     - import_tasks: tasks/vscode.yml
