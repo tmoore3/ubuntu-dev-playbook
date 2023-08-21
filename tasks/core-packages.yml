@@ -6,10 +6,10 @@
     - install
     - core
 
-- name: "core: Install Terminal Packages (tmux, tree)"
+- name: "core: Install Terminal Packages (tmux, tree, stow)"
   become: true
   apt:
-    name: ["tmux", "tree"]
+    name: ["tmux", "tree", "stow"]
   tags:
     - install
     - core
