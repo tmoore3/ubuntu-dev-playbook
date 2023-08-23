@@ -22,3 +22,6 @@
     - import_tasks: tasks/sqlite3.yml
       when: install_sqlite3
     - import_tasks: tasks/vscode.yml
+      when: install_vscode
+    - import_tasks: tasks/neovim.yml
+      when: install_neovim

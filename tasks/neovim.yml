@@ -1,0 +1,7 @@
+- name: "neovim: install neovim package"
+  become: true
+  apt:
+    name: "neovim"
+  tags:
+    - neovim
+

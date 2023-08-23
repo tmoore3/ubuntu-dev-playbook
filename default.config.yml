@@ -1,2 +1,4 @@
 ---
 install_sqlite3: true
+install_vscode: true
+install_neovim: true
