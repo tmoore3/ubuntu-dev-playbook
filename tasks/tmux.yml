@@ -1,0 +1,11 @@
+- name: "tmux: Install tmux package"
+  tags: tmux
+  apt:
+    name: tmux
+    state: latest
+  become: true
+- name: "tmux: Install tmux plugin manager"
+  tags: tmux
+  git:
+    repo: 'https://github.com/tmux-plugins/tpm'
+    dest: "~/.tmux/plugins/tpm"

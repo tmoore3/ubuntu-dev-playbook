@@ -6,10 +6,10 @@
     - install
     - core
 
-- name: "core: Install Terminal Packages (picocom, tmux, tree, stow, fzf, tldr)"
+- name: "core: Install Terminal Packages (picocom, tree, stow, fzf, tldr)"
   become: true
   apt:
-    name: ["picocom", "tmux", "tree", "stow", "fzf", "tldr"]
+    name: ["picocom", "tree", "stow", "fzf", "tldr"]
   tags:
     - install
     - core
