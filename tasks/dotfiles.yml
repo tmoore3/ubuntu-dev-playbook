@@ -12,4 +12,4 @@
 - name: "dotfiles: stow dotfiles"
   tags:
     - dotfiles
-  shell: cd $HOME/.dotfiles && ./ubuntu
+  shell: cd $HOME/.dotfiles && ./install
