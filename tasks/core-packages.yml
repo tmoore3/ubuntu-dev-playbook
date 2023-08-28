@@ -6,10 +6,10 @@
     - install
     - core
 
-- name: "core: Install Terminal Packages (picocom, tree, stow, fzf, tldr)"
+- name: "core: Install Terminal Packages (picocom, tree, stow, fzf, tldr, bat)"
   become: true
   apt:
-    name: ["picocom", "tree", "stow", "fzf", "tldr"]
+    name: ["picocom", "tree", "stow", "fzf", "tldr", "bat"]
   tags:
     - install
     - core
