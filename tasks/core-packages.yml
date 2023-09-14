@@ -14,10 +14,10 @@
     - install
     - core
 
-- name: "core: Install Networking Packages (curl, nmap)"
+- name: "core: Install Networking Packages (curl, nmap, lighttpd)"
   become: true
   apt:
-    name: ["curl", "nmap"]
+    name: ["curl", "nmap", "lighttpd"]
   tags:
     - install
     - core
@@ -62,10 +62,10 @@
     - install
     - core
 
-- name: "core: Install Software Code Quality Packages (cppcheck, spellcheck, meld, doxygen, python3-sphinx)"
+- name: "core: Install Software Code Quality Packages (cppcheck, spellcheck, meld, doxygen, python3-sphinx, ctags)"
   become: true
   apt:
-    name: ["cppcheck", "shellcheck", "meld", "doxygen", "python3-sphinx"]
+    name: ["cppcheck", "shellcheck", "meld", "doxygen", "python3-sphinx", "ctags"]
   tags:
     - install
     - core
