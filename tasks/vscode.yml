@@ -1,9 +1,43 @@
-- name: "vscode: Install vcode package"
+- name: "vscode: Install dependencies"
   tags: vscode
-  apt:
-    name: code
-    state: latest
   become: true
+  ansible.builtin.apt:
+    name:
+      - ca-certificates
+      - apt-transport-https
+    state: present
+
+- name: "vscode: Create APT keyrings dir"
+  tags: vscode
+  become: true
+  ansible.builtin.file:
+    path: '/etc/apt/keyrings'
+    state: directory
+    mode: 'u=rwx,go=rx'
+
+- name: "vscode: Install key"
+  tags: vscode
+  become: true
+  ansible.builtin.get_url:
+    url: 'https://packages.microsoft.com/keys/microsoft.asc'
+    dest: '/etc/apt/keyrings/'
+    mode: 'u=rw,go=r'
+    force: true
+
+- name: "vscode: Install VS Code repo"
+  tags: vscode
+  become: true
+  ansible.builtin.apt_repository:
+    repo: "deb [arch=amd64 signed-by=/etc/apt/keyrings/microsoft.asc] https://packages.microsoft.com/repos/code stable main"
+    filename: vscode
+    state: present
+
+- name: "vscode: Install VS Code"
+  tags: vscode
+  become: true
+  ansible.builtin.apt:
+    name: "code"
+    state: present
 
 # Extensions
 
