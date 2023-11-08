@@ -6,18 +6,18 @@
     - install
     - core
 
-- name: "core: Install Terminal Packages (picocom, tree, stow, fzf, tldr, bat)"
+- name: "core: Install Terminal Packages (picocom, zsh, bash, tree, stow, fzf, tldr, bat)"
   become: true
   apt:
-    name: ["picocom", "tree", "stow", "fzf", "tldr", "bat"]
+    name: ["picocom", "zsh", "bash", "tree", "stow", "fzf", "tldr", "bat"]
   tags:
     - install
     - core
 
-- name: "core: Install Networking Packages (curl, nmap, lighttpd)"
+- name: "core: Install Networking Packages (net-tools, curl, nmap, lighttpd)"
   become: true
   apt:
-    name: ["curl", "nmap", "lighttpd"]
+    name: ["net-tools", "curl", "nmap", "lighttpd"]
   tags:
     - install
     - core
@@ -30,10 +30,10 @@
     - install
     - core
 
-- name: "core: Install Version Control Packages (git, svn)"
+- name: "core: Install Version Control Packages (git, gitk, svn)"
   become: true
   apt:
-    name: ["git", "subversion"]
+    name: ["git", "gitk", "subversion"]
   tags:
     - install
     - core
