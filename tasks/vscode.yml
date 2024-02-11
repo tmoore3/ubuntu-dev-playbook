@@ -133,3 +133,17 @@
   register: result
   shell: code --install-extension ms-vscode.cmake-tools
   changed_when: '"successfully installed" in result.stdout'
+
+# Analysers
+- name: "vscode: Install cppcheck extension"
+  tags: vscode
+  register: result
+  shell: code --install-extension NathanJ.cppcheck-plugin
+  changed_when: '"successfully installed" in result.stdout'
+
+# Rust
+- name: "vscode: Install rust extension"
+  tags: vscode
+  register: result
+  shell: code --install-extension rust-lang.rust-analyzer
+  changed_when: '"successfully installed" in result.stdout'
