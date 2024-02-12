@@ -1,0 +1,62 @@
+#- name: Install aptitude
+#  become: true
+#  apt:
+#    name: aptitude
+#    state: latest
+#    update_cache: true
+#  tags:
+#    - docker
+
+#- name: Install required system packages
+#  become: true
+#  apt:
+#    pkg:
+#      - apt-transport-https
+#      - ca-certificates
+#      - curl
+#      - software-properties-common
+#      - python3-pip
+#      - virtualenv
+#      - python3-setuptools
+#    state: latest
+#    update_cache: true
+#  tags:
+#    - docker
+
+- name: "docker: Add Docker GPG apt Key"
+  become: true
+  apt_key:
+    url: https://download.docker.com/linux/ubuntu/gpg
+    state: present
+  tags:
+    - docker
+
+- name: "docker: Add Docker Repository"
+  become: true
+  apt_repository:
+    repo: deb https://download.docker.com/linux/ubuntu focal stable
+    state: present
+  tags:
+    - docker
+
+- name: "docker: Update APT Repositories"
+  become: true
+  apt:
+    force_apt_get: true
+    update_cache: true
+    state: present
+  tags:
+    - docker
+
+- name: "docker: Install docker-ce"
+  apt:
+    name: docker-ce
+  tags:
+    - docker
+
+- name: "docker: Install Docker Module for Python"
+  become: true
+  pip:
+    name: docker
+  tags:
+    - docker
