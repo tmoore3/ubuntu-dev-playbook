@@ -62,6 +62,13 @@
   shell: code --install-extension redhat.vscode-yaml
   changed_when: '"successfully installed" in result.stdout'
 
+# TOML
+- name: "vscode: Install vscode extension Even Better TOML"
+  tags: vscode
+  register: result
+  shell: code --install-extension tamasfe.even-better-toml
+  changed_when: '"successfully installed" in result.stdout'
+
 # Ansible
 - name: "vscode: Install vscode extension Ansible"
   tags: vscode
@@ -135,15 +142,29 @@
   changed_when: '"successfully installed" in result.stdout'
 
 # Analysers
-- name: "vscode: Install cppcheck extension"
+- name: "vscode: Install vscode extension CPP Check"
   tags: vscode
   register: result
   shell: code --install-extension NathanJ.cppcheck-plugin
   changed_when: '"successfully installed" in result.stdout'
 
 # Rust
-- name: "vscode: Install rust extension"
+- name: "vscode: Install vscode extension Rust Analyser"
   tags: vscode
   register: result
   shell: code --install-extension rust-lang.rust-analyzer
   changed_when: '"successfully installed" in result.stdout'
+
+- name: "vscode: Install vscode extension Crates"
+  tags: vscode
+  register: result
+  shell: code --install-extension serayuzgur.crates
+  changed_when: '"successfully installed" in result.stdout'
+
+# Error
+- name: "vscode: Install vscode extension Error Lens"
+  tags: vscode
+  register: result
+  shell: code --install-extension usernamehw.errorlens
+  changed_when: '"successfully installed" in result.stdout'
+
