@@ -5,6 +5,7 @@
 
   vars_files:
     - default.config.yml
+    - vars/vscode-extensions.yml
 
   pre_tasks:
   - name: Update APT Repositories

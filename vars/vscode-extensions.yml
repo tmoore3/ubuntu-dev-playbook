@@ -1,0 +1,34 @@
+---
+vscode_extensions_ids:
+# Markdown
+  - bierner.markdown-preview-github-styles
+# XML
+  - redhat.vscode-xml
+# YAML
+  - redhat.vscode-yaml
+# TOML
+  - tamasfe.even-better-toml
+# Ansible
+  - redhat.ansible
+# Python
+  - ms-python.python
+  - ms-python.vscode-pylance
+  - ms-python.pylint
+# IntelliCode
+  - VisualStudioExptTeam.vscodeintellicode
+  - VisualStudioExptTeam.intellicode-api-usage-examples
+# C
+  - ms-vscode.cpptools
+  - ms-vscode.cpptools-extension-pack
+  - ms-vscode.cpptools-themes
+# Makefile
+  - ms-vscode.makefile-tools
+# CMake
+  - ms-vscode.cmake-tools
+# Analysers
+  - NathanJ.cppcheck-plugin
+# Rust
+  - rust-lang.rust-analyzer
+  - serayuzgur.crates
+# Error
+  - usernamehw.errorlens
