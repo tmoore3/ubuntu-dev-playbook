@@ -39,7 +39,8 @@
     name: "code"
     state: present
 
-- name: "vscode: Install vscode extensions"
+- name: "vscode: Install VS Code extensions"
+  tags: vscode
   command: "code --install-extension '{{ item }}'"
   with_items:
     - "{{ vscode_extensions_ids }}"

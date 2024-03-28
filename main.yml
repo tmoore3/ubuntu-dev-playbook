@@ -4,6 +4,7 @@
 
   vars_files:
     - default.config.yml
+    - vars/pip.yml
     - vars/vscode-extensions.yml
 
   pre_tasks:
@@ -15,6 +16,7 @@
       state: present
 
   tasks:
+    - import_tasks: tasks/pip.yml
     - import_tasks: tasks/core-packages.yml
     - import_tasks: tasks/dotfiles.yml
     - import_tasks: tasks/vlc.yml
