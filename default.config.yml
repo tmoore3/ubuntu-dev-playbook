@@ -1,4 +1,10 @@
 ---
-install_sqlite3: true
+install_tmux: true
+install_pip: true
 install_vscode: true
 install_neovim: true
+install_rust: true
+install_docker: true
+install_vlc: false
+install_libreoffice: false
+install_sqlite3: false

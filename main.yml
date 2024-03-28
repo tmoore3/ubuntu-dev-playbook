@@ -16,10 +16,6 @@
       state: present
 
   tasks:
-    - name: Install Pip Packages
-      ansible.builtin.import_tasks: tasks/pip.yml
-      tags: ['pip']
-
     - name: Install Core Packages
       ansible.builtin.import_tasks: tasks/core-packages.yml
       tags: ['core']
@@ -28,34 +24,47 @@
       ansible.builtin.import_tasks: tasks/dotfiles.yml
       tags: ['dotfiles']
 
-    - name: Install VLC 
-      ansible.builtin.import_tasks: tasks/vlc.yml
-      tags: ['vlc']
-
-    - name: Install LibreOffice
-      ansible.builtin.import_tasks: tasks/libreoffice.yml
-      tags: ['libreoffice']
-
-    - name: Install SQLite3
-      ansible.builtin.import_tasks: tasks/sqlite3.yml
-      tags: ['sqlite3']
-
     - name: Install Tmux
       ansible.builtin.import_tasks: tasks/tmux.yml
       tags: ['tmux']
+      when: install_tmux
+
+    - name: Install Pip Packages
+      ansible.builtin.import_tasks: tasks/pip.yml
+      tags: ['pip']
+      when: install_pip
 
     - name: Install VS Code
       ansible.builtin.import_tasks: tasks/vscode.yml
       tags: ['vscode']
+      when: install_vscode
 
     - name: Install Neovim
       ansible.builtin.import_tasks: tasks/neovim.yml
       tags: ['neovim']
+      when: install_neovim
 
     - name: Install Rust
       ansible.builtin.import_tasks: tasks/rust.yml
       tags: ['rust']
+      when: install_rust
 
     - name: Install Docker
       ansible.builtin.import_tasks: tasks/docker.yml
       tags: ['docker']
+      when: install_docker
+
+    - name: Install VLC 
+      ansible.builtin.import_tasks: tasks/vlc.yml
+      tags: ['vlc']
+      when: install_vlc
+
+    - name: Install LibreOffice
+      ansible.builtin.import_tasks: tasks/libreoffice.yml
+      tags: ['libreoffice']
+      when: install_libreoffice
+
+    - name: Install SQLite3
+      ansible.builtin.import_tasks: tasks/sqlite3.yml
+      tags: ['sqlite3']
+      when: install_sqlite3
