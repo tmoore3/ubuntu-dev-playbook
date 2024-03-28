@@ -3,7 +3,9 @@
 ## ------------------------
 ## Install Dependencies Required for this script
 sudo apt-get update
-sudo apt install -y git make
+sudo apt install software-properties-common
+sudo apt-add-repository --yes --update ppa:ansible/ansible
+sudo apt install -y git make ansible
 
 ## ------------------------
 ## Setup Repo Locally
@@ -28,12 +30,6 @@ sudo chmod -R 755 $GIT_REPO
 
 # Enter Repo
 cd $GIT_REPO || exit
-
-## ------------------------
-##  Install Ansible
-sudo apt install software-properties-common
-sudo apt-add-repository --yes --update ppa:ansible/ansible
-sudo apt install -y ansible
 
 ## ------------------------
 ##  Run Ansible Playbook
