@@ -16,14 +16,46 @@
       state: present
 
   tasks:
-    - import_tasks: tasks/pip.yml
-    - import_tasks: tasks/core-packages.yml
-    - import_tasks: tasks/dotfiles.yml
-    - import_tasks: tasks/vlc.yml
-    - import_tasks: tasks/libreoffice.yml
-    - import_tasks: tasks/sqlite3.yml
-    - import_tasks: tasks/tmux.yml
-    - import_tasks: tasks/vscode.yml
-    - import_tasks: tasks/neovim.yml
-    - import_tasks: tasks/rust.yml
-    - import_tasks: tasks/docker.yml
+    - name: Install Pip Packages
+      ansible.builtin.import_tasks: tasks/pip.yml
+      tags: ['pip']
+
+    - name: Install Core Packages
+      ansible.builtin.import_tasks: tasks/core-packages.yml
+      tags: ['core']
+
+    - name: Install Dotfiles
+      ansible.builtin.import_tasks: tasks/dotfiles.yml
+      tags: ['dotfiles']
+
+    - name: Install VLC 
+      ansible.builtin.import_tasks: tasks/vlc.yml
+      tags: ['vlc']
+
+    - name: Install LibreOffice
+      ansible.builtin.import_tasks: tasks/libreoffice.yml
+      tags: ['libreoffice']
+
+    - name: Install SQLite3
+      ansible.builtin.import_tasks: tasks/sqlite3.yml
+      tags: ['sqlite3']
+
+    - name: Install Tmux
+      ansible.builtin.import_tasks: tasks/tmux.yml
+      tags: ['tmux']
+
+    - name: Install VS Code
+      ansible.builtin.import_tasks: tasks/vscode.yml
+      tags: ['vscode']
+
+    - name: Install Neovim
+      ansible.builtin.import_tasks: tasks/neovim.yml
+      tags: ['neovim']
+
+    - name: Install Rust
+      ansible.builtin.import_tasks: tasks/rust.yml
+      tags: ['rust']
+
+    - name: Install Docker
+      ansible.builtin.import_tasks: tasks/docker.yml
+      tags: ['docker']

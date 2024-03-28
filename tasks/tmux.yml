@@ -1,11 +1,11 @@
+---
 - name: "tmux: Install tmux package"
-  tags: tmux
-  apt:
+  become: true
+  ansible.builtin.apt:
     name: tmux
     state: latest
-  become: true
+
 - name: "tmux: Install tmux plugin manager"
-  tags: tmux
-  git:
+  ansible.builtin.git:
     repo: 'https://github.com/tmux-plugins/tpm'
     dest: "~/.tmux/plugins/tpm"

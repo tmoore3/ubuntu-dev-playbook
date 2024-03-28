@@ -1,6 +1,6 @@
+---
 - name: "libreoffice: Install libreoffice package"
-  tags: libreoffice
-  apt:
+  become: true
+  ansible.builtin.apt:
     name: libreoffice
     state: latest
-  become: true

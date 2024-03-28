@@ -1,5 +1,5 @@
-- name: "pip: Install pip package"
-  tags: pip
+---
+- name: "pip: Install Pip Package"
   ansible.builtin.pip:
     name: "{{ item }}"
   loop: "{{ pip_packages }}"
