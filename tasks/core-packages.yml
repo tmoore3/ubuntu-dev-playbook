@@ -19,10 +19,10 @@
   apt:
     name: "firefox"
 
-- name: "core: Install Version Control Packages (git, gitk, svn)"
+- name: "core: Install Version Control Packages (git, repo, svn)"
   become: true
   apt:
-    name: ["git", "gitk", "subversion"]
+    name: ["git", "repo", "subversion"]
 
 - name: "core: Install Software Development Packages (build-essential, gcc, make, cmake, pkg-config, device-tree-compiler, u-boot-tools)"
   become: true
