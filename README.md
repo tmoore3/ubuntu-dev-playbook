@@ -4,10 +4,23 @@ Custom Ansible Playbook for Ubuntu development machine
 
 ## Installation
 
+### Quick Install
+
 ```bash
 wget -qO- \
 https://github.com/tmoore3/linux-dev-playbook/raw/main/run.sh | \
 bash
+```
+
+### Installing from Source
+
+```bash
+sudo apt-get update
+sudo apt install software-properties-common
+sudo apt-add-repository --yes --update ppa:ansible/ansible
+sudo apt install -y git ansible
+git clone https://github.com/tmoore3/linux-dev-playbook.git
+ansible-playbook main.yml --ask-become-pass
 ```
 
 ## Included Applications
