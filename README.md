@@ -118,9 +118,9 @@ ansible-playbook main.yml --ask-become-pass
 
 ### Python Development
 
-- [Ansible](https://marketplace.visualstudio.com/items?itemName=ms-python.python)
-- [Ansible](https://marketplace.visualstudio.com/items?itemName=ms-python.vscode-pylance)
-- [Ansible](https://marketplace.visualstudio.com/items?itemName=ms-python.pylint)
+- [Python](https://marketplace.visualstudio.com/items?itemName=ms-python.python)
+- [Pylance](https://marketplace.visualstudio.com/items?itemName=ms-python.vscode-pylance)
+- [Pylint](https://marketplace.visualstudio.com/items?itemName=ms-python.pylint)
 
 ### C Development
 
@@ -143,4 +143,3 @@ ansible-playbook main.yml --ask-become-pass
 ### Themes
 
 - [Dracula Official](https://marketplace.visualstudio.com/items?itemName=dracula-theme.theme-dracula)
-
