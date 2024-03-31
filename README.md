@@ -23,7 +23,7 @@ git clone https://github.com/tmoore3/linux-dev-playbook.git
 ansible-playbook main.yml --ask-become-pass
 ```
 
-## Included Applications
+## Included Packages
 
 - bash
 - bat
@@ -53,7 +53,6 @@ ansible-playbook main.yml --ask-become-pass
 - [pip](https://pypi.org/project/pip/)
 - pkg-config
 - python3-sphinx
-- repo
 - [rust](https://www.rust-lang.org)
 - shellcheck
 - [sqlite3](https://www.sqlite.org)
@@ -72,7 +71,7 @@ ansible-playbook main.yml --ask-become-pass
 - [vscode](https://code.visualstudio.com)
 - [zsh](http://zsh.sourceforge.net)
 
-## Visual Studio Code extensions
+## Visual Studio Code Extensions
 
 ### Docker and Remote Development
 
@@ -98,7 +97,7 @@ ansible-playbook main.yml --ask-become-pass
 ### Markdown
 
 - [markdownlint](https://marketplace.visualstudio.com/items?itemName=DavidAnson.vscode-markdownlint)
-- [Markdown Preview Github Styling](https://marketplace.visualstudio.com/items?itemName=biernermarkdown-preview-github-styles)
+- [Markdown Preview Github Styling](https://marketplace.visualstudio.com/items?itemName=bierner.markdown-preview-github-styles)
 
 ### XML
 

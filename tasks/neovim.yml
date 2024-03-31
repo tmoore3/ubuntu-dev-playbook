@@ -1,4 +1,5 @@
-- name: "neovim: install neovim package"
+---
+- name: "neovim: Install neovim package"
   become: true
   apt:
     name: "neovim"

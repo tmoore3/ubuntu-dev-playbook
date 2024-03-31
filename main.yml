@@ -4,8 +4,10 @@
 
   vars_files:
     - default.config.yml
-    - vars/pip.yml
-    - vars/vscode-extensions.yml
+    - vars/extra-packages.yml
+    - vars/python.yml
+    - vars/rust.yml
+    - vars/vscode.yml
 
   pre_tasks:
   - name: Update APT Repositories
@@ -16,9 +18,9 @@
       state: present
 
   tasks:
-    - name: Install Core Packages
-      ansible.builtin.import_tasks: tasks/core-packages.yml
-      tags: ['core']
+    - name: Install extra apt Packages
+      ansible.builtin.import_tasks: tasks/extra-packages.yml
+      tags: ['extra-packages']
 
     - name: Install Dotfiles
       ansible.builtin.import_tasks: tasks/dotfiles.yml
@@ -30,9 +32,9 @@
       when: install_tmux
 
     - name: Install Pip Packages
-      ansible.builtin.import_tasks: tasks/pip.yml
-      tags: ['pip']
-      when: install_pip
+      ansible.builtin.import_tasks: tasks/python.yml
+      tags: ['python']
+      when: install_python
 
     - name: Install VS Code
       ansible.builtin.import_tasks: tasks/vscode.yml

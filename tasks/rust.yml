@@ -1,10 +1,10 @@
 ---
-- name: "rust: Check if cargo is installed"
+- name: "rust: Check if rust cargo is installed"
   shell: command -v cargo
   register: cargo_exists
   ignore_errors: true
 
-- name: "rust: Download installer"
+- name: "rust: Download rust installer"
   when: cargo_exists is failed
   get_url:
     url: https://sh.rustup.rs
@@ -12,6 +12,19 @@
     mode: '0755'
     force: 'yes'
 
-- name: "rust: Install rust/cargo"
+- name: "rust: Install rust cargo"
   when: cargo_exists is failed
   shell: /tmp/sh.rustup.rs -y
+
+- name: "rust: Install rust toolchains"
+  shell: rustup target add {{ item }} >/tmp/compile_logs.txt
+  with_items:
+    - "{{ rust_toolchains }}"
+  register: rustup_result
+  changed_when: "'is up to date' not in rustup_result.stderr"
+
+- name: "rust: Install rust crates"
+  community.general.cargo:
+    name: "{{ item }}"
+  with_items:
+    - "{{ rust_crates }}"

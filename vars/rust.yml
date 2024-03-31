@@ -1,0 +1,9 @@
+---
+rust_toolchains:
+## Cortex-M4F and Cortex-M7F processors (Microbit V2)
+- thumbv7em-none-eabihf
+
+rust_crates:
+## Tools
+- probe-run
+- flip-link

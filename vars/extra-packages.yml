@@ -1,0 +1,56 @@
+---
+extra_packages:
+## General Development
+- nano
+- vim
+
+## Text Terminal Packages
+- picocom
+- bash
+- bat
+- fzf
+- stow
+- tldr
+- tree
+- zsh
+
+## Networking Packages
+- net-tools
+- curl
+- nmap
+- lighttpd
+- wireshark
+
+## Browser Packages
+- firefox
+
+## Version Control Packages
+- git
+- subversion
+
+## Software Development Packages
+- build-essential
+- gcc
+- make
+- cmake
+- pkg-config
+- device-tree-compiler
+- u-boot-tools
+
+## Software Debugging Packages
+- gdb
+- gdb-multiarch
+- strace
+
+## Software Profiling Packages
+- oprofile
+- lttng-tools
+- valgrind
+
+## Software Code Quality Packages
+- cppcheck
+- shellcheck
+- meld
+- doxygen
+- python3-sphinx
+- universal-ctags
