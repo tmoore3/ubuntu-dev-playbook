@@ -75,9 +75,3 @@
       ansible.builtin.import_tasks: tasks/dracula-theme.yml
       tags: ['dracula_theme']
       when: install_dracula_theme
-
-    - name: Install Nerd Fonts 
-      ansible.builtin.import_tasks: tasks/nerd-fonts.yml
-      tags: ['nerd_fonts']
-      when: install_nerd_fonts
-
