@@ -1,6 +1,6 @@
 ---
 install_tmux: true
-install_pip: true
+install_python: true
 install_vscode: true
 install_neovim: true
 install_rust: true
