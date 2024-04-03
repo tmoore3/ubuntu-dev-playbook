@@ -9,3 +9,4 @@ install_vlc: false
 install_libreoffice: false
 install_sqlite3: false
 install_dracula_theme: true
+install_nerd_fonts: true
