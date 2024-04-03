@@ -20,7 +20,7 @@
   tasks:
     - name: Install extra apt Packages
       ansible.builtin.import_tasks: tasks/extra-packages.yml
-      tags: ['extra-packages']
+      tags: ['extra_packages']
 
     - name: Install Dotfiles
       ansible.builtin.import_tasks: tasks/dotfiles.yml
@@ -70,3 +70,8 @@
       ansible.builtin.import_tasks: tasks/sqlite3.yml
       tags: ['sqlite3']
       when: install_sqlite3
+
+    - name: Install Dracula Theme
+      ansible.builtin.import_tasks: tasks/dracula-theme.yml
+      tags: ['dracula_theme']
+      when: install_dracula_theme

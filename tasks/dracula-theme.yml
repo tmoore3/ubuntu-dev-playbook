@@ -1,0 +1,32 @@
+---
+
+## Install dracula gnome terminal
+- name: "dracula-theme: Install dconf package"
+  become: true
+  ansible.builtin.apt:
+    name: dconf-cli
+    state: latest
+
+- name: "dracula-theme: Clone dracula gnome terminal"
+  ansible.builtin.git:
+    repo: "https://github.com/dracula/gnome-terminal"
+    dest: "/tmp/gnome-terminal"
+
+- name: "dracula-theme: Install dracula gnome terminal"
+  ansible.builtin.expect:
+    command: ./install.sh
+    responses:
+      'Please select a color scheme' : '1'
+      'Please select a Gnome Terminal profile:' : '1' 
+      '\(YES to continue\) ' : "YES"
+      'Replace the actual dircolors by seebi' : '1'
+    chdir: /tmp/gnome-terminal
+
+## Install vscode dracula extensions
+- name: "dracula-theme: Install vscode dracula extensions"
+  command: "code --install-extension 'dracula-theme.theme-dracula'"
+  register: vscode_result
+  changed_when: "'already installed' not in vscode_result.stdout"
+
+
+
