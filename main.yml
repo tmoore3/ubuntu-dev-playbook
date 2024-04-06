@@ -75,3 +75,8 @@
       ansible.builtin.import_tasks: tasks/dracula-theme.yml
       tags: ['dracula_theme']
       when: install_dracula_theme
+
+    - name: Install Spotify
+      ansible.builtin.import_tasks: tasks/spotify.yml
+      tags: ['spotify']
+      when: install_spotify

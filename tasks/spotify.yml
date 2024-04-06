@@ -1,0 +1,18 @@
+---
+- name: "spotify: Add spotify apt repository key."
+  become: true
+  ansible.builtin.get_url:
+    url: "https://download.spotify.com/debian/pubkey_6224F9941A8AA6D1.gpg"
+    dest: /etc/apt/trusted.gpg.d/spotify.gpg
+    mode: '0644'
+    force: true
+
+- name: "spotify: Add spotify apt repository"
+  ansible.builtin.apt_repository: repo='deb http://repository.spotify.com stable non-free'
+
+- name: "spotify: Install spotify"
+  become: true
+  ansible.builtin.apt:
+    name: spotify-client
+    update_cache: true
+    state: latest
