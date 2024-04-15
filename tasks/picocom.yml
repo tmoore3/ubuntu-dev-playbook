@@ -1,0 +1,13 @@
+---
+- name: "picocom: Install picocom package"
+  become: true
+  ansible.builtin.apt:
+    name: picocom
+    state: latest
+
+- name: "picocom: Add user to dialout group"
+  become: true
+  ansible.builtin.user:
+    name: tmoore
+    groups: dialout
+    append: true

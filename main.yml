@@ -41,6 +41,11 @@
       tags: ['vscode']
       when: install_vscode
 
+    - name: Install Picocom
+      ansible.builtin.import_tasks: tasks/picocom.yml
+      tags: ['picocom']
+      when: install_picocom
+
     - name: Install Neovim
       ansible.builtin.import_tasks: tasks/neovim.yml
       tags: ['neovim']

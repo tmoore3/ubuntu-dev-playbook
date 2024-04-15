@@ -5,7 +5,6 @@ extra_packages:
 - vim
 
 ## Text Terminal Packages
-- picocom
 - bash
 - bat
 - fzf
