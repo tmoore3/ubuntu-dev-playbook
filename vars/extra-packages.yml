@@ -54,3 +54,6 @@ extra_packages:
 - doxygen
 - python3-sphinx
 - universal-ctags
+
+## Yoco Tools
+- bmap-tools
