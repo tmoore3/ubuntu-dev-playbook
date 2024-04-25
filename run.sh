@@ -11,7 +11,7 @@ sudo apt install -y git ansible
 ## Setup Repo Locally
 FOLDER=/tmp
 GIT_USER=tmoore3
-GIT_REPO=linux-dev-playbook
+GIT_REPO=ubuntu-dev-playbook
 GIT_BRANCH=main
 URL=https://github.com/$GIT_USER/$GIT_REPO.git
 
