@@ -32,6 +32,7 @@ extra_packages:
 - gcc
 - make
 - cmake
+- meson
 - pkg-config
 - device-tree-compiler
 - u-boot-tools

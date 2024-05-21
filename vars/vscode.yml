@@ -45,6 +45,7 @@ vscode_extensions_ids:
   - ms-vscode.cpptools-themes
   - ms-vscode.makefile-tools
   - ms-vscode.cmake-tools
+  - mesonbuild.mesonbuild
   - NathanJ.cppcheck-plugin
 
 ## Rust Development
