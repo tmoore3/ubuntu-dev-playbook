@@ -4,6 +4,7 @@ git_email: "tomwmoore@hotmail.com"
 git_username: "Tom Moore"
 git_editor: "nvim"
 
+install_dotfiles: true
 install_tmux: true
 install_python: true
 install_vscode: true

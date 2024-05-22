@@ -25,6 +25,7 @@
     - name: Install Dotfiles
       ansible.builtin.import_tasks: tasks/dotfiles.yml
       tags: ['dotfiles']
+      when: install_dotfiles
 
     - name: Install Tmux
       ansible.builtin.import_tasks: tasks/tmux.yml
