@@ -1,4 +1,4 @@
-# Ubunut Development Ansible Playbook
+# Ubuntu Development Ansible Playbook
 
 Custom Ansible Playbook for Ubuntu development machine
 
