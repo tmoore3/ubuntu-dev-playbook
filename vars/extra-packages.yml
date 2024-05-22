@@ -57,3 +57,7 @@ extra_packages:
 
 ## Yoco Tools
 - bmap-tools
+
+## Python
+- python3
+- python3-pip
