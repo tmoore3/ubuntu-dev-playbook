@@ -1,4 +1,4 @@
-# Linux Development Ansible Playbook
+# Ubunut Development Ansible Playbook
 
 Custom Ansible Playbook for Ubuntu development machine
 
@@ -16,10 +16,10 @@ bash
 
 ```bash
 sudo apt-get update
-sudo apt install software-properties-common
+sudo apt install -y software-properties-common
 sudo apt-add-repository --yes --update ppa:ansible/ansible
 sudo apt install -y git ansible
-git clone https://github.com/tmoore3/linux-dev-playbook.git
+git clone https://github.com/tmoore3/ubuntu-dev-playbook
 ansible-playbook main.yml --ask-become-pass
 ```
 
@@ -44,6 +44,7 @@ ansible-playbook main.yml --ask-become-pass
 - lttng-tools
 - make
 - [meld](https://meldmerge.org)
+- [meson](https://mesonbuild.com/)
 - [nano](https://www.nano-editor.org)
 - [neovim](https://neovim.io)
 - net-tools
