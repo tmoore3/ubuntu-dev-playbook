@@ -11,6 +11,7 @@ install_vscode: true
 install_picocom: true
 install_neovim: true
 install_rust: true
+install_rust_packages: true
 install_docker: true
 install_vlc: false
 install_libreoffice: false

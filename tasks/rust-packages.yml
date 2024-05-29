@@ -1,0 +1,7 @@
+---
+- name: Install rust host packages
+  community.general.cargo:
+    name: "{{ item }}"
+    state: latest
+  loop: "{{ rust_packages }}"
+

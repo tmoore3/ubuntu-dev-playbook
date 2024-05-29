@@ -8,6 +8,7 @@
     - vars/python.yml
     - vars/rust.yml
     - vars/vscode.yml
+    - vars/rust-packages.yml
 
   pre_tasks:
   - name: Update APT Repositories
@@ -59,7 +60,12 @@
 
     - name: Install Rust
       ansible.builtin.import_tasks: tasks/rust.yml
-      tags: ['rust']
+      tags: ['rust', 'rust_packages']
+      when: install_rust
+
+    - name: Install Rust
+      ansible.builtin.import_tasks: tasks/rust-packages.yml
+      tags: ['rust_packages']
       when: install_rust
 
     - name: Install Docker
