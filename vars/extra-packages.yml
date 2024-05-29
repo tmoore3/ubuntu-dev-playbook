@@ -12,7 +12,6 @@ extra_packages:
 - tree
 - zsh
 - ripgrep
-- zoxide
 
 ## Networking Packages
 - net-tools

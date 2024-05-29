@@ -2,3 +2,4 @@
 rust_packages:
 ## General Development
 - eza
+- zoxide
