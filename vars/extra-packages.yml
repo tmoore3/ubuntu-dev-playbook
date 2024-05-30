@@ -9,7 +9,6 @@ extra_packages:
 - fzf
 - stow
 - tldr
-- tree
 - zsh
 - ripgrep
 

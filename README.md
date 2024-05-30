@@ -63,7 +63,6 @@ ansible-playbook main.yml --ask-become-pass
 - [subversion](https://subversion.apache.org)
 - tldr
 - tmux
-- tree
 - u-boot-tools
 - universal-ctags
 - [valgrind](https://valgrind.org)
