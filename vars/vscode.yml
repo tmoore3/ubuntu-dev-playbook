@@ -57,3 +57,11 @@ vscode_extensions_ids:
 
 ## Spellchecking
   - streetsidesoftware.code-spell-checker
+
+nrf_vscode_extensions_ids:
+## nRF Connect SDK Extensions
+  - nordic-semiconductor.nrf-connect
+  - nordic-semiconductor.nrf-connect-extension-pack
+  - nordic-semiconductor.nrf-devicetree
+  - nordic-semiconductor.nrf-kconfig
+  - nordic-semiconductor.nrf-terminal

@@ -41,3 +41,11 @@
     - "{{ vscode_extensions_ids }}"
   register: vscode_result
   changed_when: "'already installed' not in vscode_result.stdout"
+
+- name: "vscode: Install Nordic SDK VS Code extensions"
+  command: "code --install-extension '{{ item }}'"
+  with_items:
+    - "{{ nrf_vscode_extensions_ids }}"
+  register: vscode_result
+  changed_when: "'already installed' not in vscode_result.stdout"
+  when: install_nrf_vscode_extensions
