@@ -25,6 +25,9 @@ vscode_extensions_ids:
   - DavidAnson.vscode-markdownlint
   - bierner.markdown-preview-github-styles
 
+## CSV
+  - mechatroner.rainbow-csv
+
 ## XML
   - redhat.vscode-xml
 
