@@ -1,0 +1,14 @@
+---
+- name: "kicad: Add kicad 8.0 releases PPA"
+  apt_repository:
+    repo: ppa:kicad/kicad-8.0-releases
+    state: present
+    update_cache: yes
+  become: true
+
+- name: "kicad: Install kicad"
+  become: true
+  ansible.builtin.apt:
+    name: kicad
+    update_cache: true
+    state: latest

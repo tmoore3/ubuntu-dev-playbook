@@ -18,5 +18,6 @@ install_libreoffice: false
 install_sqlite3: false
 install_dracula_theme: true
 install_spotify: true
+install_kicad: false
 
 install_nrf_vscode_extensions: false

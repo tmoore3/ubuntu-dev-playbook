@@ -93,6 +93,11 @@
       tags: ['dracula_theme']
       when: install_dracula_theme
 
+    - name: Install Kicad
+      ansible.builtin.import_tasks: tasks/kicad.yml
+      tags: ['kicad']
+      when: install_kicad
+
     - name: Install Spotify
       ansible.builtin.import_tasks: tasks/spotify.yml
       tags: ['spotify']
