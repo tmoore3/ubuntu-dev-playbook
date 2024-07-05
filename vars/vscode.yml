@@ -25,7 +25,7 @@ vscode_extensions_ids:
   - DavidAnson.vscode-markdownlint
   - bierner.markdown-preview-github-styles
 
-## CSV
+## CSV/TSV
   - mechatroner.rainbow-csv
 
 ## XML
@@ -44,6 +44,7 @@ vscode_extensions_ids:
   - ms-python.python
   - ms-python.vscode-pylance
   - ms-python.pylint
+  - seanwu.vscode-qt-for-python
 
 ## C Development
   - ms-vscode.cpptools

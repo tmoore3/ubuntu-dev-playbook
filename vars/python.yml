@@ -1,3 +1,6 @@
 ---
 pip_packages:
   - mkdocs
+  - pyside6 
+  - pyserial
+  - pyqtgraph

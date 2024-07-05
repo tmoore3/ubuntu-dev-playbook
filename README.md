@@ -99,6 +99,9 @@ ansible-playbook main.yml --ask-become-pass
 - [markdownlint](https://marketplace.visualstudio.com/items?itemName=DavidAnson.vscode-markdownlint)
 - [Markdown Preview Github Styling](https://marketplace.visualstudio.com/items?itemName=bierner.markdown-preview-github-styles)
 
+### CSV/TSV
+- [CSV/TSV](https://marketplace.visualstudio.com/items?itemName=mechatroner.rainbow-csv)
+
 ### XML
 
 - [XML](https://marketplace.visualstudio.com/items?itemName=redhat.vscode-xml)
@@ -142,3 +145,11 @@ ansible-playbook main.yml --ask-become-pass
 ### Themes
 
 - [Dracula Official](https://marketplace.visualstudio.com/items?itemName=dracula-theme.theme-dracula)
+
+### nRF SDK
+
+- [nRF Connect](https://marketplace.visualstudio.com/items?itemName=nordic-semiconductor.nrf-connect)
+- [nRF Connect-extension-pack](https://marketplace.visualstudio.com/items?itemName=nordic-semiconductor.nrf-connect-extension-pack)
+- [nRF Devicetree](https://marketplace.visualstudio.com/items?itemName=nordic-semiconductor.nrf-devicetree)
+- [nRF KConfig](https://marketplace.visualstudio.com/items?itemName=nordic-semiconductor.nrf-kconfig)
+- [nRF Terminal](https://marketplace.visualstudio.com/items?itemName=nordic-semiconductor.nrf-terminal)
