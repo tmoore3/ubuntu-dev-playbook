@@ -102,3 +102,8 @@
       ansible.builtin.import_tasks: tasks/spotify.yml
       tags: ['spotify']
       when: install_spotify
+    
+    - name: Install Obsidian
+      ansible.builtin.import_tasks: tasks/obsidian.yml
+      tags: ['obsidian']
+      when: install_obsidian
